@@ -1,5 +1,5 @@
 <template>
-  <div class="col-10 col-sm-7 col-lg-7 h-5">
+  <div class="col-10 col-sm-7 col-lg-7">
     <img
       :alt="alt"
       class="d-block mx-lg-auto img-fluid"
