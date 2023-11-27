@@ -8,7 +8,7 @@
     tabindex="0"
   >
     <!-- Render active component contents with vue transition -->
-    <transition name="fade" mode="out-in"> <router-view /> </transition>ss
+    <transition name="fade" mode="out-in"> <router-view /> </transition>
     <back-to-top
       visibleoffset="500"
       right="30px"

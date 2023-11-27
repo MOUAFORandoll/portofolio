@@ -1,6 +1,6 @@
 <template>
   <!-- Menu -->
-  <MenuVue :links="links"> Randoll Mouafo </MenuVue>
+  <MenuVue :links="links"> Randoll MOUAFO </MenuVue>
   <HeroSection id="hero" pic="header.png">
     <template v-slot:welcome>Welcome!</template>
 
