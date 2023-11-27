@@ -1,5 +1,5 @@
 <template>
-  <section class="p-3 p-lg-5 mobile">
+  <section class="p-3 p-lg-5" :class="classe">
     <div class="container">
       <div class="row">
         <h2 class="my-md-5 mb-3 text-center">{{ title }}</h2>
@@ -10,18 +10,6 @@
 </template>
 <script>
 export default {
-  props: ["title"],
+  props: ["title", "classe"],
 };
 </script>
-<style>
-@media (max-width: 770px) {
-  .mobile {
-    margin-top: 300px;
-  }
-}
-@media (max-width: 400px) {
-  .mobile {
-    margin-top: 400px;
-  }
-}
-</style>

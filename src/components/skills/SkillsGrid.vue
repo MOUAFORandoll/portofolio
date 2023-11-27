@@ -1,5 +1,5 @@
 <template>
-  <BaseContainer title="I work on...">
+  <BaseContainer title="I work on..." classe="mobile">
     <SingleSkill v-for="skill in skills" :key="skill.id" :skill="skill" />
   </BaseContainer>
 </template>
@@ -13,4 +13,15 @@ export default {
   components: { SingleSkill, BaseContainer },
 };
 </script>
-<style scoped></style>
+<style>
+@media (max-width: 770px) {
+  .mobile {
+    margin-top: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .mobile {
+    margin-top: 400px;
+  }
+}
+</style>
