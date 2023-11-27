@@ -4,7 +4,7 @@ const experience = [
     date: "Mar 2023 - Present",
     position: "MOBILE APPLICATION AND LARAVEL Backend DEVELOPER",
     company: "MEDICASURE Sarl",
-    url: "https://medsurlink.com/",
+    url: "https://medicasure.com/",
     description: [
       {
         id: 1,

@@ -1,7 +1,7 @@
 {
   "name": "devfolio",
   "version": "0.0.1",
-  "description": "Developer portfolio in Vue.js and Bootstrap 5",
+  "description": "Developer Mouafo portfolio  ",
   "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -15,9 +15,11 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "aos": "^2.3.4",
+    "axios": "^1.6.2",
     "bootstrap": "^5.2.0",
     "core-js": "^3.24.1",
     "vue": "^3.2.37",
+    "vue-final-modal": "^4.4.6",
     "vue-meta": "^3.0.0-alpha.10",
     "vue-router": "^4.1.4",
     "vuex": "^4.0.2"
