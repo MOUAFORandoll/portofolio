@@ -31,27 +31,17 @@
       <simple-button
         class="btn-outline-secondary"
         icon="fa-regular fa-file-lines"
-        @click="openDialog = true"
+        @click="openModal(SkillsGrid)"
         >Contact me</simple-button
       >
+      <!-- <VDialog :open="{ openDialog }"> <p>Your content</p> </VDialog>; -->
     </template>
   </HeroSection>
   <SkillsGrid id="skills" :skills="skills" />
   <ExperienceTable id="edu-exp" :experience="experience" />
-  <AwardsGrid id="awards" :awards="awards" />
+  <!-- <AwardsGrid id="awards" :awards="awards" /> -->
   <ProjectsGrid id="projects" :projects="projects" />
   <FooterVue :links="socials" :copyright="copyright" />
-  <vue-final-modal v-model="openDialog">
-    <div class="flex flex-col">
-      <div>Check out our stacked Dialog</div>
-
-      <div>Notice that tab / shift+tab will only stay within this dialog.</div>
-
-      <div class="flex justify-end space-x-2">
-        <button @click="simpleDialog = false">Close</button>
-      </div>
-    </div>
-  </vue-final-modal>
 </template>
 <script>
 import MenuVue from "@/components/shared/AppMenu.vue";
@@ -59,21 +49,20 @@ import FooterVue from "@/components/shared/AppFooter.vue";
 import HeroSection from "@/components/hero/HeroSection.vue";
 import SkillsGrid from "@/components/skills/SkillsGrid.vue";
 import ExperienceTable from "@/components/experience/ExperienceTable.vue";
-import AwardsGrid from "@/components/awards/AwardsGrid.vue";
+// import AwardsGrid from "@/components/awards/AwardsGrid.vue";
 import ProjectsGrid from "@/components/projects/ProjectsGrid.vue";
-import { VueFinalModal } from "vue-final-modal";
 
 // data to fill components
 import skills from "@/data/skills";
 import experience from "@/data/experience";
-import awards from "@/data/awards";
+// import awards from "@/data/awards";
 import projects from "@/data/projects";
 
 import SimpleButton from "@/components/reusable/SimpleButton.vue";
 import HiWord from "@/components/reusable/HighlightIt.vue";
 import axios from "axios";
 import { ref } from "vue";
-
+import { openModal } from "jenesius-vue-modal";
 export default {
   name: "HomeView",
   data: () => {
@@ -92,10 +81,10 @@ export default {
           name: "experience",
           url: "#edu-exp",
         },
-        {
-          name: "awards",
-          url: "#awards",
-        },
+        // {
+        //   name: "awards",
+        //   url: "#awards",
+        // },
         {
           name: "projects",
           url: "#projects",
@@ -103,7 +92,7 @@ export default {
       ],
       skills,
       experience,
-      awards,
+      // awards,
       projects,
       socials: [
         {
@@ -120,11 +109,15 @@ export default {
       copyright: "2023 Randoll MOUAFO",
     };
   },
+
   setup() {
-    let openDialog = ref(false);
-    let loading = ref(true);
+    let openDialog = ref(true);
+    let loading = ref(false);
     let nom = ref(true);
 
+    const open = async () => {
+      openModal(SkillsGrid);
+    };
     const sendMail = async () => {
       let data = {
         nom: nom.value,
@@ -144,6 +137,7 @@ export default {
       loading,
       sendMail,
       openDialog,
+      open,
     };
   },
   components: {
@@ -152,8 +146,7 @@ export default {
     HeroSection,
     SkillsGrid,
     ExperienceTable,
-    VueFinalModal,
-    AwardsGrid,
+    // AwardsGrid,
     ProjectsGrid,
     SimpleButton,
     HiWord,

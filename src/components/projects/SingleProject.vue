@@ -15,6 +15,7 @@
           class="card-img-top rounded-0"
           :src="require(`@/assets/images/${project.image}`)"
           :alt="project.title"
+          style="height: 350px"
         />
         <a
           class="card-img-overlay overlay-content text-start p-lg-4"

@@ -18,10 +18,11 @@
     "axios": "^1.6.2",
     "bootstrap": "^5.2.0",
     "core-js": "^3.24.1",
+    "jenesius-vue-modal": "^1.10.3",
     "vue": "^3.2.37",
-    "vue-final-modal": "^4.4.6",
     "vue-meta": "^3.0.0-alpha.10",
     "vue-router": "^4.1.4",
+    "vuetify": "^3.4.3",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

@@ -1,33 +1,43 @@
 const projects = [
   {
     id: 1,
-    title: "My Uni Lab Website",
-    image: "ml-lab.png",
-    url: "https://compvis.ru/",
-    category: "Web Development",
-    tags: ["Bootstrap"],
+    title: "Medsurlink",
+    image: "medsurlink.webp",
+    url: "https://play.google.com/store/apps/details?id=com.medsurlink.app.production&pcampaignid=web_share",
+    category: "Mobile Development",
+    tags: ["Flutter", "Laravel", "Lumen"],
     description:
-      "Website for research interinstitutional group Machine Learning, Computer Vision, and Dynamic Systems",
+      "Complete computerized medical record solution, providing an alert feature that allows users to find the appropriate facility to address their health issues. It also includes an establishment addition feature, enabling an institution manager or a medical service provider to make services available to users.",
   },
   {
     id: 2,
-    title: "SmartChange",
-    image: "smartchange.png",
-    url: "https://github.com/xtenzQ/SmartChange",
+    title: "Medsurlink Web ",
+    image: "medicalink.png",
+    url: "https://medsurlink.com/",
     category: "Machine Learning",
-    tags: ["Python", "Vue.js", "Flask", "PyTorch"],
+    tags: ["Bootstrap", "VueJs", "Laravel", "Node Js (Socket server)"],
     description:
-      "Third winner in SIA track of JunctionX Seoul 2021 hackathon. AI-powered web application able to track changes in the urban landscape.",
+      "Web-based medical monitoring platform on which I carried out maintenance work and implemented updates to both the front-end and back-end of the project.",
   },
   {
     id: 3,
-    title: "SmartMonitor",
-    image: "smartmonitor.png",
-    url: "https://github.com/xtenzQ/SmartMonitor",
+    title: "Medicasure Web ",
+    image: "medicasure.png",
+    url: "https://medicasure.com/",
     category: "Machine Learning",
-    tags: ["C#", "ASP.NET Core", "OpenCV", "Tensorflow"],
+    tags: ["Bootstrap", "VueJs", "Laravel", "Node Js (Socket server)"],
     description:
-      "Third winner in SIA track of JunctionX Seoul 2020 hackathon. Detects damaged building by natural disasters and get a brief information about it.",
+      "Web-based medical monitoring platform on which I carried out maintenance work and implemented updates to both the front-end and back-end of the project.",
+  },
+  {
+    id: 2,
+    title: "Digester App",
+    image: "digester.webp",
+    url: "https://play.google.com/store/apps/details?id=com.masterpiece.digester",
+    category: "Machine Learning",
+    tags: ["Flutter", "Symfony"],
+    description:
+      "Online audiobook reader app that brings together condensed best non-fiction books into mini text and 10-25min audio format",
   },
 ];
 
