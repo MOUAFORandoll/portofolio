@@ -1,0 +1,126 @@
+<template>
+  <!-- Menu -->
+  <MenuVue :links="links"> Randoll Mouafo </MenuVue>
+  <HeroSection id="hero" pic="header.png">
+    <template v-slot:welcome>Welcome!</template>
+
+    Welcome! I'm <b>Randoll Mouafo</b>, a passionate
+    <hi-word>fullstack developer.</hi-word> I possess a plethora of essential
+    skills to create exceptional web experiences. My expertise spans various
+    domains. I craft dynamic interfaces harnessing the potential of Vue.js and
+    TypeScript. Building robust APIs is my daily bread, thanks to my proficiency
+    with Symfony and Laravel. Additionally, I excel in mobile development using
+    Flutter and Dart. The realms of socket servers and streaming hold no secrets
+    for me, with a strong command of Node.js. Navigating server configuration,
+    be it Nginx or Apache technologies, comes naturally to me. My skills in
+    dockerization and setting up pipelines with Jenkins ensure seamless and
+    efficient application deployments. In essence, I am the versatile and
+    skilled developer who will breathe life into your projects.
+    <!-- My name is <b>Randoll MOUAFO</b> and I'm a   <hi-word>software engineer</hi-word>. My passion is building
+    <hi-word>web applications</hi-word> and
+    <hi-word>designing websites</hi-word> using modern frameworks. Also I'm
+    doing research in <hi-word>machine learning</hi-word> applied to renewable
+    energy -->
+    <template v-slot:buttons>
+      <simple-button
+        class="btn-primary text-white"
+        url="https://www.linkedin.com/in/randoll-mouafo-3b8783252"
+        icon="fab linkedin-in"
+        >Linkedin !</simple-button
+      >
+      <simple-button
+        class="btn-outline-secondary"
+        url="mailto:hari.randoll@gmail.com"
+        icon="fa-regular fa-file-lines"
+        >Contact me</simple-button
+      >
+    </template>
+  </HeroSection>
+  <SkillsGrid id="skills" :skills="skills" />
+  <ExperienceTable id="edu-exp" :experience="experience" />
+  <AwardsGrid id="awards" :awards="awards" />
+  <ProjectsGrid id="projects" :projects="projects" />
+  <FooterVue :links="socials" :copyright="copyright" />
+</template>
+<script>
+import MenuVue from "@/components/shared/AppMenu.vue";
+import FooterVue from "@/components/shared/AppFooter.vue";
+import HeroSection from "@/components/hero/HeroSection.vue";
+import SkillsGrid from "@/components/skills/SkillsGrid.vue";
+import ExperienceTable from "@/components/experience/ExperienceTable.vue";
+import AwardsGrid from "@/components/awards/AwardsGrid.vue";
+import ProjectsGrid from "@/components/projects/ProjectsGrid.vue";
+
+// data to fill components
+import skills from "@/data/skills";
+import experience from "@/data/experience";
+import awards from "@/data/awards";
+import projects from "@/data/projects";
+
+import SimpleButton from "@/components/reusable/SimpleButton.vue";
+import HiWord from "@/components/reusable/HighlightIt.vue";
+
+export default {
+  name: "HomeView",
+  data: () => {
+    return {
+      delay: 100,
+      links: [
+        {
+          name: "home",
+          url: "#hero",
+        },
+        {
+          name: "skills",
+          url: "#skills",
+        },
+        {
+          name: "experience",
+          url: "#edu-exp",
+        },
+        {
+          name: "awards",
+          url: "#awards",
+        },
+        {
+          name: "projects",
+          url: "#projects",
+        },
+      ],
+      skills,
+      experience,
+      awards,
+      projects,
+      socials: [
+        {
+          id: 1,
+          icon: "fab linkedin-in",
+          url: "https://linkedin.com/in/xtenzq",
+        },
+        {
+          id: 2,
+          icon: "fab github",
+          url: "https://github.com/xtenzq",
+        },
+      ],
+      copyright: "2022 Randoll MOUAFO",
+    };
+  },
+  components: {
+    MenuVue,
+    FooterVue,
+    HeroSection,
+    SkillsGrid,
+    ExperienceTable,
+    AwardsGrid,
+    ProjectsGrid,
+    SimpleButton,
+    HiWord,
+  },
+};
+</script>
+<style lang="scss" scoped>
+.prim {
+  color: $primary;
+}
+</style>
