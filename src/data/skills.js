@@ -1,5 +1,19 @@
 const skills = [
   {
+    id: 3,
+    title: "Mobile",
+    image: "mobile.png",
+    languages: [
+      {
+        id: 1,
+        title: "Flutter / Dart",
+        css: "Flutter / Dart",
+      },
+    ],
+    description:
+      "I am also a fan of Flutter and Dart. for building high-performance mobile apps. Flutter allows me to develop sleek cross-platform apps with native-like performance, while Dart ensures my code base remains robust and efficient. Using Flutter and Dart, I create engaging and seamless mobile experiences.",
+  },
+  {
     id: 1,
     title: "Back End",
     image: "backend_blue.png",
@@ -52,20 +66,7 @@ const skills = [
     description:
       "As a full-stack developer, I also have skills in Front End development, leveraging a range of languages ​​and tools. My expertise encompasses JavaScript, TypeScript, Vue.js, Bootstrap and Vuetify.",
   },
-  {
-    id: 3,
-    title: "Mobile",
-    image: "mobile.png",
-    languages: [
-      {
-        id: 1,
-        title: "Flutter / Dart",
-        css: "Flutter / Dart",
-      },
-    ],
-    description:
-      "I am also a fan of Flutter and Dart. for building high-performance mobile apps. Flutter allows me to develop sleek cross-platform apps with native-like performance, while Dart ensures my code base remains robust and efficient. Using Flutter and Dart, I create engaging and seamless mobile experiences.",
-  },
+
   {
     id: 4,
     title: "Linux Deployement",
